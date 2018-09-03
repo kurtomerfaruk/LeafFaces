@@ -44,7 +44,6 @@ public class OSMLayer extends UIComponentBase {
 
         Map mapComponent = (Map) parent;
         String mapVar = mapComponent.getWidgetVar();
-        System.out.println("mapVar:"+mapVar);
 
         String layer = "var osmUrl = 'http://{s}.tile.osm.org/{z}/{x}/{y}.png',"
                 + "osm = L.tileLayer(osmUrl, {"
