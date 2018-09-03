@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.0"
+              xmlns="http://java.sun.com/xml/ns/javaee" 
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+              xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+    <name>leaffaces</name>
+    <application>
+        <resource-handler>com.blogspot.ofarukkurt.leaffaces.utils.LeafFacesResourceHandler</resource-handler>
+    </application>
+    <application>
+        <system-event-listener>
+            <system-event-listener-class>com.blogspot.ofarukkurt.leaffaces.PostConstructApplicationEventListener</system-event-listener-class>
+            <system-event-class>javax.faces.event.PostConstructApplicationEvent</system-event-class>
+            <source-class>javax.faces.application.Application</source-class>
+        </system-event-listener>
+    </application>
+</faces-config>

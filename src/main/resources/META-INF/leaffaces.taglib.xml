@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<facelet-taglib xmlns="http://java.sun.com/xml/ns/javaee"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facelettaglibrary_2_0.xsd"
+                version="2.0">
+    <namespace>http://ofarukkurt.blogspot.com/leaffaces</namespace>
+    <tag>
+        <tag-name>map</tag-name>
+        <component>
+            <component-type>com.blogspot.ofarukkurt.leaffaces.component.map.Map</component-type>
+            <renderer-type>com.blogspot.ofarukkurt.leaffaces.component.map.MapRenderer</renderer-type>
+        </component>
+        <attribute>
+            <name>widgetVar</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>center</name>
+            <required>true</required>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>zoom</name>
+            <required>true</required>
+            <type>java.lang.Integer</type>
+        </attribute>
+        <attribute>
+            <name>minZoom</name>
+            <required>true</required>
+            <type>java.lang.Integer</type>
+        </attribute>
+        <attribute>
+            <name>maxZoom</name>
+            <required>true</required>
+            <type>java.lang.Integer</type>
+        </attribute>
+    </tag>
+</facelet-taglib>
