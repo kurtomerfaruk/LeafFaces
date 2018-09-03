@@ -46,7 +46,8 @@ public class Map extends UIInput {
         zoom,
         maxZoom,
         minZoom,
-        removeDivHeight
+        removeDivHeight,
+        style
 
     }
 
@@ -65,6 +66,9 @@ public class Map extends UIInput {
 
         writer.startElement("div", this);
         writer.writeAttribute("id", id, "id");
+        if(getStyle()!=null){
+           writer.writeAttribute("style", getStyle(), null);
+        }
         writer.endElement("div");
 
         writer.startElement("script", this);
@@ -151,6 +155,14 @@ public class Map extends UIInput {
 
     public void setRemoveDivHeight(final int removeDivHeight) {
         getStateHelper().put(PropertyKeys.removeDivHeight, removeDivHeight);
+    }
+
+    public String getStyle() {
+        return (String) getStateHelper().eval(PropertyKeys.style, null);
+    }
+
+    public void setStyle(final String style) {
+        getStateHelper().put(PropertyKeys.style, style);
     }
 
 }
