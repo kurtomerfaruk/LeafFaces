@@ -28,7 +28,7 @@ import javax.faces.context.ResponseWriter;
 /**
  *
  * @author Omer Faruk Kurt
- * @Created on date 30/06/2018 09:47:42
+ * @Created on date 03/09/2018 09:47:42
  */
 @FacesComponent(value = LeafFaces.COMPONENT_FAMILY + ".Locate")
 @ResourceDependencies({
@@ -38,7 +38,9 @@ public class Locate extends UIComponentBase {
 
     protected enum PropertyKeys {
 
-        title
+        title,
+        position,
+        flyTo
     }
 
     @Override
@@ -54,10 +56,14 @@ public class Locate extends UIComponentBase {
         String mapVar = mapComponent.getWidgetVar();
 
         String title = getTitle();
+        String position = getPosition();
+        boolean flyTo = getFlyTo();
 
         String layer = "L.control.locate({"
                 + "strings: {"
-                + "title: '" + title + "'}"
+                + "title: '" + title + "'},"
+                + "position:'"+position+"',"
+                + "flyTo:"+flyTo+","
                 + "}).addTo(" + mapVar + ");";
 
         writer.write(layer);
@@ -75,4 +81,21 @@ public class Locate extends UIComponentBase {
     public void setTitle(final String title) {
         getStateHelper().put(PropertyKeys.title, title);
     }
+
+    public String getPosition() {
+        return (String) getStateHelper().eval(PropertyKeys.position, "topleft");
+    }
+
+    public void setPosition(final String position) {
+        getStateHelper().put(PropertyKeys.position, position);
+    }
+
+    public boolean getFlyTo() {
+        return (Boolean) getStateHelper().eval(PropertyKeys.flyTo, false);
+    }
+
+    public void setFlyTo(final boolean flyTo) {
+        getStateHelper().put(PropertyKeys.flyTo, flyTo);
+    }
+
 }

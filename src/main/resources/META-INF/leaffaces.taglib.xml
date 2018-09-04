@@ -58,6 +58,14 @@
             <name>title</name>
             <type>java.lang.String</type>
         </attribute>
+        <attribute>
+            <name>position</name>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>flyTo</name>
+            <type>java.lang.Boolean</type>
+        </attribute>
     </tag>
     <tag>
         <tag-name>wms</tag-name>
