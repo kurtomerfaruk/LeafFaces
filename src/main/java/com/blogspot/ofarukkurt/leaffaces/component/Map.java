@@ -164,5 +164,6 @@ public class Map extends UIInput {
     public void setStyle(final String style) {
         getStateHelper().put(PropertyKeys.style, style);
     }
+    
 
 }
