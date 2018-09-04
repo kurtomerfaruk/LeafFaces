@@ -14,3 +14,6 @@
 
 # HeatMap
 <img src="https://1.bp.blogspot.com/-Rs0bOQfsBxc/W448pz_0zjI/AAAAAAAAAUM/0lAg90ILs8EaXnZRKhZYv_1jB1gQWM-KACLcBGAs/s640/leaffaces_heatmap.png"/>
+
+# Zoom Level
+<img src="https://1.bp.blogspot.com/-RFDg9zLfY0g/W45rCx6yCUI/AAAAAAAAAUc/WlolQJmds8gw_2WMiTODSAWgrxeBTKfSACLcBGAs/s640/leaffaces_zoom_level.png"/>

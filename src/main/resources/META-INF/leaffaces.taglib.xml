@@ -115,4 +115,14 @@
             <type>java.lang.Double</type>
         </attribute>
     </tag>
+    <tag>
+        <tag-name>zoomLevel</tag-name>
+        <component>
+            <component-type>com.blogspot.ofarukkurt.leaffaces.component.ZoomLevel</component-type>
+        </component>
+        <attribute>
+            <name>title</name>
+            <type>java.lang.String</type>
+        </attribute>
+    </tag>
 </facelet-taglib>
