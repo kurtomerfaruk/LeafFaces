@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.blogspot.ofarukkurt.leaffaces.model.map;
+package com.blogspot.ofarukkurt.leaffaces.component;
 
 import com.blogspot.ofarukkurt.leaffaces.component.Map;
 import com.blogspot.ofarukkurt.leaffaces.utils.LeafFaces;
