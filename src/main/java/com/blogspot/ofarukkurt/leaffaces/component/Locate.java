@@ -63,7 +63,7 @@ public class Locate extends UIComponentBase {
                 + "strings: {"
                 + "title: '" + title + "'},"
                 + "position:'"+position+"',"
-                + "flyTo:"+flyTo+","
+                + "flyTo:"+flyTo
                 + "}).addTo(" + mapVar + ");";
 
         writer.write(layer);
