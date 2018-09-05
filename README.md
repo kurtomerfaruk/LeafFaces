@@ -17,3 +17,6 @@
 
 # Zoom Level
 <img src="https://1.bp.blogspot.com/-RFDg9zLfY0g/W45rCx6yCUI/AAAAAAAAAUc/WlolQJmds8gw_2WMiTODSAWgrxeBTKfSACLcBGAs/s640/leaffaces_zoom_level.png"/>
+
+# Markers
+<img src="https://1.bp.blogspot.com/-PwTHHSx67Dk/W4-s47STNyI/AAAAAAAAAUo/R_sBiBOKQ7Ua4R0CLzBQRzSY2pvEhspHgCLcBGAs/s640/leaffaces_marker.png"/>
