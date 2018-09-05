@@ -20,3 +20,6 @@
 
 # Markers
 <img src="https://1.bp.blogspot.com/-PwTHHSx67Dk/W4-s47STNyI/AAAAAAAAAUo/R_sBiBOKQ7Ua4R0CLzBQRzSY2pvEhspHgCLcBGAs/s640/leaffaces_marker.png"/>
+
+# Logo
+<img src="https://3.bp.blogspot.com/-j6C7KSur6p0/W4_W__UMDZI/AAAAAAAAAU0/6AT6S9l_KYMKRTK-hQwotZMg8eNns7L9gCLcBGAs/s640/leaffaces_logo.png"/>
