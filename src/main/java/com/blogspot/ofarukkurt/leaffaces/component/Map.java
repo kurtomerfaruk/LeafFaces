@@ -13,12 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-
 package com.blogspot.ofarukkurt.leaffaces.component;
 
+import com.blogspot.ofarukkurt.leaffaces.model.map.MapModel;
+import com.blogspot.ofarukkurt.leaffaces.model.map.Marker;
 import com.blogspot.ofarukkurt.leaffaces.utils.LeafFaces;
 import java.io.IOException;
+import java.util.Iterator;
 import javax.faces.application.ResourceDependencies;
 import javax.faces.application.ResourceDependency;
 import javax.faces.component.FacesComponent;
@@ -47,7 +48,8 @@ public class Map extends UIInput {
         maxZoom,
         minZoom,
         removeDivHeight,
-        style
+        style,
+        model
 
     }
 
@@ -66,8 +68,8 @@ public class Map extends UIInput {
 
         writer.startElement("div", this);
         writer.writeAttribute("id", id, "id");
-        if(getStyle()!=null){
-           writer.writeAttribute("style", getStyle(), null);
+        if (getStyle() != null) {
+            writer.writeAttribute("style", getStyle(), null);
         }
         writer.endElement("div");
 
@@ -94,6 +96,12 @@ public class Map extends UIInput {
         String updateSize = "setTimeout(function(){ " + mapVar + ".invalidateSize()}, 400);";
 
         writer.write(addMap + fitToPageDiv + updateSize);
+
+        if (getModel() != null) {
+            if (!getModel().getMarkers().isEmpty()) {
+                encodeMarkers(context, this);
+            }
+        }
     }
 
     @Override
@@ -164,6 +172,34 @@ public class Map extends UIInput {
     public void setStyle(final String style) {
         getStateHelper().put(PropertyKeys.style, style);
     }
-    
 
+    public MapModel getModel() {
+        return (MapModel) getStateHelper().eval(PropertyKeys.model, null);
+    }
+
+    public void setModel(MapModel model) {
+        getStateHelper().put(PropertyKeys.model, model);
+    }
+
+    protected void encodeMarkers(FacesContext context, Map map) throws IOException {
+        ResponseWriter writer = context.getResponseWriter();
+
+        MapModel model = map.getModel();
+
+        String icon = "var icon = new L.Icon.Default();\n"
+                + "icon.options.shadowSize = [0,0];\n";
+
+        for (Iterator<Marker> iterator = model.getMarkers().iterator(); iterator.hasNext();) {
+            Marker marker = iterator.next();
+            //encodeMarker(context, marker);
+            //writer.write("L.marker([" + marker.getLatlng().toString() + "]).addTo(" + getWidgetVar() + ");");
+            String markerValue = icon + "L.marker([" + marker.getLatlng().toString() + "],{icon:icon}).addTo(" + getWidgetVar() + ")";
+            if (marker.getTitle() != null) {
+                writer.write(markerValue + ".bindPopup('" + marker.getTitle() + "');");
+            } else {
+                writer.write(markerValue + ";");
+            }
+
+        }
+    }
 }

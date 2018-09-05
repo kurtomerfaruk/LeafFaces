@@ -42,6 +42,10 @@
             <name>style</name>
             <type>java.lang.String</type>
         </attribute>
+        <attribute>
+            <name>model</name>
+            <type>com.blogspot.ofarukkurt.leaffaces.model.MapModel</type>
+        </attribute>
     </tag>
     <tag>
         <tag-name>osmlayer</tag-name>
