@@ -29,3 +29,6 @@
 
 # Draw Toolbar
 <img src="https://2.bp.blogspot.com/-wRWG4mF9O4U/W5Djm2MIQwI/AAAAAAAAAVM/oMZuv0nr7fEkOuYR2a-UnwoESiptUCIEQCLcBGAs/s640/leaffaces_draw_toolbar.png"/>
+
+# Minimap
+<img src="https://4.bp.blogspot.com/-AKf2L3gzENg/W5ED4xXXaHI/AAAAAAAAAVY/3dDZ2o9scu4GEJgicYWpt5efHGL0A3ocgCLcBGAs/s640/leaffaces_minimap.png"/>
