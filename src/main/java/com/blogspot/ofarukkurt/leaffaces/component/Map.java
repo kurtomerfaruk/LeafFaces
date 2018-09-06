@@ -97,17 +97,16 @@ public class Map extends UIInput {
 
         writer.write(addMap + fitToPageDiv + updateSize);
 
-        if (getModel() != null) {
-            if (!getModel().getMarkers().isEmpty()) {
-                encodeMarkers(context, this);
-            }
-        }
     }
 
     @Override
     public void encodeEnd(FacesContext context) throws IOException {
         ResponseWriter writer = context.getResponseWriter();
-
+        if (getModel() != null) {
+            if (!getModel().getMarkers().isEmpty()) {
+                encodeMarkers(context, this);
+            }
+        }
         writer.endElement("script");
     }
 
