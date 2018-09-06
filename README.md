@@ -1,4 +1,9 @@
 # LeafFaces
+
+* *Author* : Ömer Faruk KURT
+* *Technologies* : Java EE 7 (JSF 2.2.7, Leafletjs 1.3.4, PrimeFaces 6.1
+* *Application Servers* : Glassfish 4
+
 # Blog : http://ofarukkurt.blogspot.com/p/leaflet-for-jsf.html
 
 # For JSF Example : https://github.com/kurtomerfaruk/LeafFacesSite

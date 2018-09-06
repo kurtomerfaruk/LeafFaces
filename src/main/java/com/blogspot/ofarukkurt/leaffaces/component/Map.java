@@ -90,10 +90,10 @@ public class Map extends UIInput {
                     + "			editActions = [ "
                     + "                LeafletToolbar.EditAction.Popup.Edit,"
                     + "                LeafletToolbar.EditAction.Popup.Delete,"
-                    + "				LeafletToolbar.ToolbarAction.extendOptions({\n"
+                    + "				LeafletToolbar.ToolbarAction.extendOptions({"
                     + "					toolbarIcon: { "
-                    + "						className: 'leaflet-color-picker', \n"
-                    + "						html: '<span class=\"fa fa-eyedropper\"></span>' \n"
+                    + "						className: 'leaflet-color-picker', "
+                    + "						html: '<span class=\"fa fa-eyedropper\"></span>' "
                     + "					},\n"
                     + "					subToolbar: new LeafletToolbar({ actions: [\n"
                     + "						L.ColorPicker.extendOptions({ color: '#db1d0f' }),"
@@ -233,17 +233,13 @@ public class Map extends UIInput {
         String icon = "var icon = new L.Icon.Default();"
                 + "icon.options.shadowSize = [0,0];";
 
-        for (Iterator<Marker> iterator = model.getMarkers().iterator(); iterator.hasNext();) {
-            Marker marker = iterator.next();
-            //encodeMarker(context, marker);
-            //writer.write("L.marker([" + marker.getLatlng().toString() + "]).addTo(" + getWidgetVar() + ");");
+        for (Marker marker : model.getMarkers()) {
             String markerValue = icon + "L.marker([" + marker.getLatlng().toString() + "],{icon:icon}).addTo(" + getWidgetVar() + ")";
             if (marker.getTitle() != null) {
                 writer.write(markerValue + ".bindPopup('" + marker.getTitle() + "');");
             } else {
                 writer.write(markerValue + ";");
             }
-
         }
     }
 }
