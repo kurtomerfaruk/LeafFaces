@@ -175,4 +175,35 @@
             <type>java.lang.String</type>
         </attribute>
     </tag>
+    <tag>
+        <tag-name>miniMap</tag-name>
+        <component>
+            <component-type>com.blogspot.ofarukkurt.leaffaces.component.MiniMap</component-type>
+        </component>
+        <attribute>
+            <name>toggleDisplay</name>
+            <type>java.lang.Booelan</type>
+        </attribute>
+        <attribute>
+            <description>Position topleft | topright | bottomleft | bottomright</description>
+            <name>position</name>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>hideLabel</name>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>showLabel</name>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>width</name>
+            <type>java.lang.Integer</type>
+        </attribute>
+        <attribute>
+            <name>height</name>
+            <type>java.lang.Integer</type>
+        </attribute>
+    </tag>
 </facelet-taglib>
