@@ -15,7 +15,6 @@
  */
 package com.blogspot.ofarukkurt.leaffaces.component;
 
-import com.blogspot.ofarukkurt.leaffaces.component.Map;
 import com.blogspot.ofarukkurt.leaffaces.utils.LeafFaces;
 import java.io.IOException;
 import javax.faces.component.FacesComponent;

@@ -36,6 +36,8 @@ import javax.faces.context.ResponseWriter;
 @ResourceDependencies({
     @ResourceDependency(library = "leaffaces", name = "leaflet.css"),
     @ResourceDependency(library = "leaffaces", name = "leaflet.js"),
+    @ResourceDependency(library = "leaffaces", name = "loading/loading.css"),
+    @ResourceDependency(library = "leaffaces", name = "loading/loading.js"),
     @ResourceDependency(library = "primefaces", name = "jquery/jquery.js")
 })
 public class Map extends UIInput {
@@ -49,7 +51,8 @@ public class Map extends UIInput {
         minZoom,
         removeDivHeight,
         style,
-        model
+        model,
+        loadingControl
 
     }
 
@@ -66,6 +69,8 @@ public class Map extends UIInput {
         int minZoom = getMinZoom();
         int removeDivHeight = getRemoveDivHeight();
 
+        boolean loadingControl = getLoadingControl();
+
         writer.startElement("div", this);
         writer.writeAttribute("id", id, "id");
         if (getStyle() != null) {
@@ -78,8 +83,8 @@ public class Map extends UIInput {
 
         String addMap = "var " + mapVar + " = L.map('" + id + "', {"
                 + "minZoom: " + minZoom + ","
-                + "maxZoom: " + maxZoom
-                + "})"
+                + "maxZoom: " + maxZoom + ","
+                + "loadingControl: " + loadingControl + "})"
                 + ".setView([" + center + "], "
                 + zoom + ");";
 
@@ -178,6 +183,14 @@ public class Map extends UIInput {
 
     public void setModel(MapModel model) {
         getStateHelper().put(PropertyKeys.model, model);
+    }
+
+    public boolean getLoadingControl() {
+        return (Boolean) getStateHelper().eval(PropertyKeys.loadingControl, false);
+    }
+
+    public void setLoadingControl(boolean loadingControl) {
+        getStateHelper().put(PropertyKeys.loadingControl, loadingControl);
     }
 
     protected void encodeMarkers(FacesContext context, Map map) throws IOException {

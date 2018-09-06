@@ -46,6 +46,11 @@
             <name>model</name>
             <type>com.blogspot.ofarukkurt.leaffaces.model.MapModel</type>
         </attribute>
+        <attribute>
+            <description>Loading animation default is false</description>
+            <name>loadingControl</name>
+            <type>java.lang.Boolean</type>
+        </attribute>
     </tag>
     <tag>
         <tag-name>osmlayer</tag-name>
