@@ -233,4 +233,21 @@
             <type>java.lang.Boolean</type>
         </attribute>
     </tag>
+    <tag>
+        <tag-name>thematic</tag-name>
+        <component>
+            <component-type>com.blogspot.ofarukkurt.leaffaces.component.Thematic</component-type>
+        </component>
+    </tag>
+    <tag>
+        <tag-name>cluster</tag-name>
+        <component>
+            <component-type>com.blogspot.ofarukkurt.leaffaces.component.Cluster</component-type>
+        </component>
+        <attribute>
+            <name>points</name>
+            <required>true</required>
+            <type>java.util.List</type>
+        </attribute>
+    </tag>
 </facelet-taglib>
