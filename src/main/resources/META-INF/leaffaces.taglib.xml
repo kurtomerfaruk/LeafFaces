@@ -280,4 +280,54 @@
             <type>java.lang.Boolean</type>
         </attribute>
     </tag>
+    <tag>
+        <tag-name>button</tag-name>
+        <component>
+            <component-type>com.blogspot.ofarukkurt.leaffaces.component.Button</component-type>
+        </component>
+        <attribute>
+            <name>icon</name>
+            <type>java.lang.String</type>
+            <required>true</required>
+        </attribute>
+        <attribute>
+            <name>title</name>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>buttonId</name>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>styleClass</name>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>function</name>
+            <type>java.lang.String</type>
+            <required>true</required>
+        </attribute>
+    </tag>
+    <tag>
+        <tag-name>buttonBar</tag-name>
+        <component>
+            <component-type>com.blogspot.ofarukkurt.leaffaces.component.ButtonBar</component-type>
+        </component>
+        <attribute>
+            <name>printerFileName</name>
+            <type>java.lang.String</type>
+        </attribute>
+        <attribute>
+            <name>printerExportOnly,</name>
+            <type>java.lang.Boolean</type>
+        </attribute>
+        <attribute>
+            <name>printerHidden,</name>
+            <type>java.lang.Boolean</type>
+        </attribute>
+        <attribute>
+            <name>printerHideControlContainer</name>
+            <type>java.lang.Boolean</type>
+        </attribute>
+    </tag>
 </facelet-taglib>
