@@ -198,8 +198,8 @@ public class Map extends UIInput {
 
         MapModel model = map.getModel();
 
-        String icon = "var icon = new L.Icon.Default();\n"
-                + "icon.options.shadowSize = [0,0];\n";
+        String icon = "var icon = new L.Icon.Default();"
+                + "icon.options.shadowSize = [0,0];";
 
         for (Iterator<Marker> iterator = model.getMarkers().iterator(); iterator.hasNext();) {
             Marker marker = iterator.next();

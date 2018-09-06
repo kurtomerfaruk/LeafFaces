@@ -23,3 +23,6 @@
 
 # Logo
 <img src="https://3.bp.blogspot.com/-j6C7KSur6p0/W4_W__UMDZI/AAAAAAAAAU0/6AT6S9l_KYMKRTK-hQwotZMg8eNns7L9gCLcBGAs/s640/leaffaces_logo.png"/>
+
+# Loading Control
+<img src="https://3.bp.blogspot.com/-ObfZbqyTZnQ/W5DAWGg6brI/AAAAAAAAAVA/trYrHLwH7ckVZYvJ3bhd5QDW0Fx_DKUaQCLcBGAs/s640/leaffaces_loading_control.png"/>
