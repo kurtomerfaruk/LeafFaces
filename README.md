@@ -26,3 +26,6 @@
 
 # Loading Control
 <img src="https://3.bp.blogspot.com/-ObfZbqyTZnQ/W5DAWGg6brI/AAAAAAAAAVA/trYrHLwH7ckVZYvJ3bhd5QDW0Fx_DKUaQCLcBGAs/s640/leaffaces_loading_control.png"/>
+
+# Draw Toolbar
+<img src="https://2.bp.blogspot.com/-wRWG4mF9O4U/W5Djm2MIQwI/AAAAAAAAAVM/oMZuv0nr7fEkOuYR2a-UnwoESiptUCIEQCLcBGAs/s640/leaffaces_draw_toolbar.png"/>

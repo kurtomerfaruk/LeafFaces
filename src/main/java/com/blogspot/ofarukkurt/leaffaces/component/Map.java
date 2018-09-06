@@ -52,7 +52,8 @@ public class Map extends UIInput {
         removeDivHeight,
         style,
         model,
-        loadingControl
+        loadingControl,
+        drawToolbar
 
     }
 
@@ -70,6 +71,7 @@ public class Map extends UIInput {
         int removeDivHeight = getRemoveDivHeight();
 
         boolean loadingControl = getLoadingControl();
+        boolean drawToolbar = getDrawToolbar();
 
         writer.startElement("div", this);
         writer.writeAttribute("id", id, "id");
@@ -81,12 +83,34 @@ public class Map extends UIInput {
         writer.startElement("script", this);
         writer.writeAttribute("type", "text/javascript", null);
 
+        String drawToolbarValue = "";
+
+        if (drawToolbar) {
+            drawToolbarValue = ",drawnItems = new L.FeatureGroup().addTo(" + mapVar + "),"
+                    + "			editActions = [ "
+                    + "                LeafletToolbar.EditAction.Popup.Edit,"
+                    + "                LeafletToolbar.EditAction.Popup.Delete,"
+                    + "				LeafletToolbar.ToolbarAction.extendOptions({\n"
+                    + "					toolbarIcon: { "
+                    + "						className: 'leaflet-color-picker', \n"
+                    + "						html: '<span class=\"fa fa-eyedropper\"></span>' \n"
+                    + "					},\n"
+                    + "					subToolbar: new LeafletToolbar({ actions: [\n"
+                    + "						L.ColorPicker.extendOptions({ color: '#db1d0f' }),"
+                    + "						L.ColorPicker.extendOptions({ color: '#025100' }),"
+                    + "						L.ColorPicker.extendOptions({ color: '#ffff00' }),"
+                    + "						L.ColorPicker.extendOptions({ color: '#0000ff' }) "
+                    + "					]})"
+                    + "				})"
+                    + "			];";
+        }
+
         String addMap = "var " + mapVar + " = L.map('" + id + "', {"
                 + "minZoom: " + minZoom + ","
                 + "maxZoom: " + maxZoom + ","
                 + "loadingControl: " + loadingControl + "})"
                 + ".setView([" + center + "], "
-                + zoom + ");";
+                + zoom + ")" + drawToolbarValue + ";";
 
         id = id.replace(":", "\\\\:");
 
@@ -191,6 +215,14 @@ public class Map extends UIInput {
 
     public void setLoadingControl(boolean loadingControl) {
         getStateHelper().put(PropertyKeys.loadingControl, loadingControl);
+    }
+
+    public boolean getDrawToolbar() {
+        return (Boolean) getStateHelper().eval(PropertyKeys.drawToolbar, false);
+    }
+
+    public void setDrawToolbar(boolean drawToolbar) {
+        getStateHelper().put(PropertyKeys.drawToolbar, drawToolbar);
     }
 
     protected void encodeMarkers(FacesContext context, Map map) throws IOException {
