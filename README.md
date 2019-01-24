@@ -37,3 +37,9 @@
 
 # Minimap
 <img src="https://4.bp.blogspot.com/-AKf2L3gzENg/W5ED4xXXaHI/AAAAAAAAAVY/3dDZ2o9scu4GEJgicYWpt5efHGL0A3ocgCLcBGAs/s640/leaffaces_minimap.png"/>
+
+# Scale
+<img src="https://1.bp.blogspot.com/-qHkYIPVB0II/W5EYOeGfi_I/AAAAAAAAAVk/ZohN2yhdCLkIIdpbCpUWzikY5mU8oC6xwCLcBGAs/s1600/leaffaces_scale.png" />
+
+# Coordinates
+<img src="https://3.bp.blogspot.com/-eP-wrBSahsI/XEoJgiJym8I/AAAAAAAAAXk/gGwRTawmwFAOYC15mftA97Zz8jYyoTjYACLcBGAs/s1600/leaflet_coordinates.png" />
