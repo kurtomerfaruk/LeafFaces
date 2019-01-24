@@ -37,13 +37,13 @@ import javax.faces.context.ResponseWriter;
 public class Coordinates extends UIComponentBase {
 
     protected enum PropertyKeys {
-
         positions,
         decimals,
         decimalSeperator,
         labelTemplateLat,
         labelTemplateLng,
-        enableUserInput
+        enableUserInput,
+        useDMS
     }
 
     @Override
@@ -64,6 +64,7 @@ public class Coordinates extends UIComponentBase {
         String labelTemplateLat = getLabelTemplateLat();
         String labelTemplateLng = getLabelTemplateLng();
         boolean enableUserInput = isEnableUserInput();
+        boolean useDMS = isUseDms();
 
         String layer = "L.control.coordinates({"
                 + "	position:\"" + positions + "\","
@@ -72,7 +73,7 @@ public class Coordinates extends UIComponentBase {
                 + "	labelTemplateLat:'" + labelTemplateLat + "', "
                 + "	labelTemplateLng:'" + labelTemplateLng + "', "
                 + "	enableUserInput:" + enableUserInput + ", "
-                + "	useDMS:false, "
+                + "	useDMS:"+useDMS+", "
                 + "	useLatLngOrder: true, "
                 + "	markerType: L.marker,"
                 + "	markerProps: {},"
@@ -132,6 +133,14 @@ public class Coordinates extends UIComponentBase {
 
     public void setEnableUserInput(boolean enableUserInput) {
         getStateHelper().put(PropertyKeys.enableUserInput, enableUserInput);
+    }
+    
+    public boolean isUseDms(){
+        return (boolean) getStateHelper().eval(PropertyKeys.useDMS,false);
+    }
+    
+    public void setUseDms(boolean useDms){
+        getStateHelper().put(PropertyKeys.useDMS, useDms);
     }
 
 }
